@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-fuchsia-700;
+  }
+  body {
+    @apply bg-[#151515] m-0 p-0;
+  }
+}
+
+@layer components {
+  .main-nav {
+    @apply bg-red-400;
+  }
+  .loader {
+    @apply fixed flex justify-center items-center top-0 w-full h-screen;
+  }
+
+  .loader .loader-anim {
+    @apply relative h-80;
+  }
+}
