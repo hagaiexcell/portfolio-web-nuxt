@@ -8,22 +8,24 @@ module.exports = {
     "./nuxt.config.{js,ts}",
     "./app.vue",
     "./error.vue",
+    "./assets/css/main.css",
   ],
   theme: {
     extend: {
       container: {
         center: true,
         padding: {
-          DEFAULT: "5rem",
+          DEFAULT: "2rem",
+          md: "10rem",
         },
       },
       fontFamily: {
-        "notosans-l": ["notosans-Light"],
-        "notosans-r": ["notosans-Regular"],
-        "notosans-m": ["notosans-Medium"],
-        "notosans-sb": ["notosans-SemiBold"],
-        "notosans-b": ["notosans-Bold"],
-        "notosans-eb": ["notosans-ExtraBold"],
+        notosans: ["'Noto Sans'", "sans-serif"],
+      },
+      colors: {
+        primaryBg: "#151515",
+        secondary: "#242424",
+        primary: "#4EE29F",
       },
     },
   },

@@ -10,5 +10,28 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ["@pinia/nuxt"],
+  modules: [
+    "@nuxt/image",
+    "@hypernym/nuxt-gsap",
+    "@nuxtjs/eslint-module",
+    [
+      "@pinia/nuxt",
+      {
+        autoImports: [
+          "storeToRefs",
+          // automatically imports `defineStore`
+          "defineStore", // import { defineStore } from 'pinia'
+          // automatically imports `defineStore` as `definePiniaStore`
+          ["defineStore", "definePiniaStore"], // import { defineStore as definePiniaStore } from 'pinia'
+        ],
+      },
+    ],
+  ],
+  gsap: {
+    composables: true,
+    provide: false,
+    extraPlugins: {
+      scrollTrigger: true,
+    },
+  },
 });

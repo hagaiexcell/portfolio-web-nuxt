@@ -19,7 +19,7 @@ onMounted(() => {
 
     <div :class="loaderState ? 'hidden' : ''">
       <header>
-        <Navbar />
+        <!-- <Navbar /> -->
       </header>
 
       <div>

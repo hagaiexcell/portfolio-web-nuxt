@@ -1,3 +1,10 @@
+<script setup></script>
+
 <template>
-  <div class="bg-fuchsia-500 text-white">Hello Tailwind</div>
+  <main>
+    <CursorFollower />
+    <PagesHomeHero />
+    <PagesHomeSkills />
+    <PagesHomeProjects />
+  </main>
 </template>

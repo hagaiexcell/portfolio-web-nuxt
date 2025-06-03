@@ -73,4 +73,5 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
->>>>>>> deada48 (first setup)
+
+> > > > > > > deada48 (first setup)
