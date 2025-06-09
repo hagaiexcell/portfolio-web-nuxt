@@ -4,6 +4,7 @@
   <main>
     <CursorFollower />
     <PagesHomeHero />
+    <Spacer />
     <PagesHomeSkills />
     <PagesHomeProjects />
   </main>

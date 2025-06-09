@@ -1,5 +1,6 @@
 <script>
 import "./assets/css/main.css";
+import "./assets/css/lenis.css";
 </script>
 
 <template>

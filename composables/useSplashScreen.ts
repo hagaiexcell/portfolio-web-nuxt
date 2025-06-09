@@ -5,7 +5,11 @@ export const useSplashScreen = defineStore("splashScreen", {
   }),
   actions: {
     hide() {
-      const tl = gsap.timeline();
+      const tl = gsap.timeline({
+        onComplete: () => {
+          this.isVisible = false;
+        },
+      });
 
       tl.to(".splash-container-2", {
         duration: 1.4,

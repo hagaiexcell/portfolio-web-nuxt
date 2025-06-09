@@ -20,7 +20,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        notosans: ["'Noto Sans'", "sans-serif"],
+        monsterrat: ["Montserrat"],
       },
       colors: {
         primaryBg: "#151515",
