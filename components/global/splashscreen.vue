@@ -13,6 +13,7 @@ const _controller = useSplashScreen();
 
 onMounted(() => {
   _controller.hide();
+  global.loader = false;
 });
 </script>
 

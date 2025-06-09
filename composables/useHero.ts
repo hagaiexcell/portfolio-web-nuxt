@@ -1,5 +1,6 @@
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
+import { SplitText } from "gsap/SplitText";
 
 const gsap = useGsap;
 const words = [
@@ -8,7 +9,8 @@ const words = [
   "Mobile Developer",
 ];
 
-gsap.registerPlugin(ScrollTrigger, TextPlugin);
+gsap.registerPlugin(ScrollTrigger, TextPlugin, SplitText);
+
 export const useHero = defineStore("hero", {
   state: () => ({}),
   actions: {
@@ -67,12 +69,15 @@ export const useHero = defineStore("hero", {
         wordsTl.add(tl);
       });
 
-      gsap.from(".hero-desc-text", {
-        opacity: 0,
-        filter: "blur(20px)",
-        ease: "sine.inOut",
-        delay: 7,
+      const split = SplitText.create(".hero-desc-text", { type: "words" });
+
+      gsap.timeline().from(split.words, {
         duration: 1,
+        opacity: 0,
+        yPercent: 120,
+        stagger: 0.05,
+        ease: "back.out",
+        delay: 7,
       });
 
       const iconWave = document.querySelector(".ic-wave");
@@ -137,26 +142,6 @@ export const useHero = defineStore("hero", {
           });
         });
 
-      // const contactText = document.querySelector(
-      //   ".hero-contact-wrapper .hero-contact-text",
-      // );
-
-      // contactText?.addEventListener("mouseenter", () => {
-      //   gsap.to(".hero-contact-wrapper .underline-bar", {
-      //     width: "100%",
-      //     duration: 0.3,
-      //     ease: "power2.out",
-      //   });
-      // });
-
-      // contactText?.addEventListener("mouseleave", () => {
-      //   gsap.to(".hero-contact-wrapper .underline-bar", {
-      //     width: 0,
-      //     duration: 0.3,
-      //     ease: "power2.in",
-      //   });
-      // });
-
       const tl = gsap.timeline({
         repeat: -1,
         yoyo: true,
@@ -189,6 +174,67 @@ export const useHero = defineStore("hero", {
         { duration: 4, clipPath: "inset(0% 0 0 0)", ease: "none" },
         0,
       );
+
+      gsap
+        .timeline({ repeat: -1 })
+        .to(".scroll-down .pointer-wrapper .pointer", {
+          top: "28px",
+          ease: "power2.out",
+          duration: 1.5,
+        })
+        .to(".scroll-down .pointer-wrapper .pointer", {
+          opacity: 0,
+          ease: "power2.inOut",
+          duration: 0.4,
+          delay: -1,
+        })
+        .set(".scroll-down .pointer-wrapper .pointer", {
+          opacity: 1,
+          top: "0px",
+        });
+
+      // blurring when scrolling down
+      ScrollTrigger.create({
+        trigger: ".home-hero",
+        start: `top+=${window.innerHeight - 700} top`,
+        end: "bottom top",
+        onEnter: () => {
+          gsap.to(".home-hero", {
+            filter: "blur(10px)",
+            backgroundColor: "rgba(0, 0, 0, 0.7)",
+            duration: 0.5,
+          });
+          gsap.to(".cursor-follower", {
+            zIndex: "10",
+          });
+          gsap.to(".scroll-down", {
+            y: "20vh",
+          });
+          gsap.to(".hero-video", {
+            opacity: "100%",
+          });
+          gsap.to(".overlay", {
+            zIndex: "20",
+          });
+        },
+        onLeaveBack: () => {
+          gsap.to(".home-hero", {
+            filter: "blur(0px)",
+            backgroundColor: "rgba(0, 0, 0, 0)",
+            duration: 0.5,
+          });
+          gsap.to(".cursor-follower", {
+            opacity: 0.3,
+          });
+          gsap.to(".scroll-down", {
+            y: 0,
+            duration: 0.3,
+          });
+          gsap.to(".hero-video", {
+            opacity: "40%",
+          });
+        },
+      });
     },
   },
 });
