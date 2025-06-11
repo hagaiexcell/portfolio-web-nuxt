@@ -102,45 +102,41 @@ export const useHero = defineStore("hero", {
       //   },
       // });
 
-      gsap.from(".hero-contact-wrapper .btn", {
+      gsap.from(".btn.hero", {
         y: "20vh",
         duration: 1.5,
         ease: "bounce.inOut",
         delay: 7,
       });
-      gsap.to(".hero-contact-wrapper .btn", {
+      gsap.to(".btn.hero", {
         opacity: 1,
       });
 
-      document
-        .querySelector(".hero-contact-wrapper")
-        ?.addEventListener("mouseenter", () => {
-          gsap.to(".hero-contact-wrapper .btn", {
-            y: "0.8rem",
-            duration: 0.3,
-            ease: "power2.in",
-            onComplete: () => {
-              gsap.to(".hero-contact-wrapper .btn", {
-                boxShadow:
-                  "0 7px 0 0 rgba(48,140,98,0), 0 12px 0 0 rgba(28,82,57,0)",
-                duration: 0.3,
-                delay: -0.25,
-                ease: "power2.in",
-              });
-            },
-          });
+      document.querySelector(".btn")?.addEventListener("mouseenter", () => {
+        gsap.to(".btn", {
+          y: "0.8rem",
+          duration: 0.3,
+          ease: "power2.in",
+          onComplete: () => {
+            gsap.to(".btn", {
+              boxShadow:
+                "0 7px 0 0 rgba(48,140,98,0), 0 12px 0 0 rgba(28,82,57,0)",
+              duration: 0.3,
+              delay: -0.25,
+              ease: "power2.in",
+            });
+          },
         });
+      });
 
-      document
-        .querySelector(".hero-contact-wrapper")
-        ?.addEventListener("mouseleave", () => {
-          gsap.to(".hero-contact-wrapper .btn", {
-            y: "0",
-            duration: 0.3,
-            ease: "power2.out",
-            boxShadow: "0 7px 0 0 #308c62, 0 12px 0 0 #1c5239",
-          });
+      document.querySelector(".btn")?.addEventListener("mouseleave", () => {
+        gsap.to(".btn", {
+          y: "0",
+          duration: 0.3,
+          ease: "power2.out",
+          boxShadow: "0 7px 0 0 #d435f0, 0 12px 0 0 #46114f",
         });
+      });
 
       const tl = gsap.timeline({
         repeat: -1,

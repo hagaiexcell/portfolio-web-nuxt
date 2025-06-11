@@ -16,7 +16,10 @@ module.exports = {
         center: true,
         padding: {
           DEFAULT: "2rem",
-          md: "10rem",
+          sm: "2rem",
+          lg: "4rem",
+          xl: "5rem",
+          "2xl": "6rem",
         },
       },
       fontFamily: {
@@ -25,7 +28,7 @@ module.exports = {
       colors: {
         primaryBg: "#151515",
         secondary: "#242424",
-        primary: "#4EE29F",
+        primary: "#9C27B0",
       },
     },
   },
