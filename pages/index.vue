@@ -5,6 +5,7 @@
     <CursorFollower />
     <PagesHomeHero />
     <Spacer />
+    <PagesHomeAboutMe />
     <PagesHomeSkills />
     <PagesHomeProjects />
   </main>

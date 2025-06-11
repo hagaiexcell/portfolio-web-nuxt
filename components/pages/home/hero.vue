@@ -43,9 +43,9 @@ onMounted(() => {
           </h2>
         </div>
 
-        <div class="hero-contact-wrapper">
-          <div class="btn">
-            <p class="hero-contact-text">CONTACT ME</p>
+        <div class="btn-wrapper">
+          <div class="btn hero opacity-0">
+            <p>CONTACT ME</p>
           </div>
         </div>
 

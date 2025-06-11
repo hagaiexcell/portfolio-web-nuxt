@@ -7,10 +7,8 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 export const useSkills = defineStore("skills", {
   state: () => ({}),
   actions: {
-    async showSkills() {
+    showSkills() {
       const split = SplitText.create("#split-tech", { type: "chars" });
-
-      await nextTick();
 
       const tl = gsap.timeline({
         scrollTrigger: {

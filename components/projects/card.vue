@@ -2,6 +2,7 @@
 
 <template>
   <div class="project-card">
+    <div class="project-card-overlay"></div>
     <div class="project-card-img">
       <NuxtImg class="" src="/images/dummy-project.webp" alt="" />
     </div>

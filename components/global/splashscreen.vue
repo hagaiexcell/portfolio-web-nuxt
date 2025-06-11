@@ -31,7 +31,7 @@ onMounted(() => {
   @apply relative h-screen w-screen;
 }
 .splash-container {
-  @apply absolute left-0 top-0 flex h-screen w-screen items-center justify-center bg-purple-500;
+  @apply absolute left-0 top-0 flex h-screen w-screen items-center justify-center bg-primary;
 }
 .splash-container-2 {
   @apply absolute left-0 top-0 flex h-screen w-screen items-center justify-center bg-secondary;

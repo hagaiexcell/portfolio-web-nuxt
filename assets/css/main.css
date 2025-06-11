@@ -39,7 +39,7 @@
     @apply mb-6 text-6xl font-extrabold uppercase text-white lg:text-8xl xl:text-[10rem];
   }
   .section-title .stroke {
-    @apply text-purple-500;
+    @apply text-primary;
   }
 
   /* home hero */
@@ -77,29 +77,37 @@
   .hero-desc-wrapper .hero-desc-text {
     @apply text-lg font-medium leading-relaxed text-gray-300 md:text-3xl;
   }
-  .hero-contact-wrapper {
-    @apply h-[4.5rem] w-fit overflow-y-hidden;
+
+  /* home about */
+  .home-about {
+    @apply relative;
   }
-  .hero-contact-wrapper .btn {
-    @apply opacity-0;
+  .about-container {
+    @apply flex flex-col gap-10 lg:flex-row;
   }
-  .hero-contact-wrapper .hero-contact-text {
-    @apply cursor-pointer text-sm font-semibold tracking-wider text-white;
+  .about-image-wrapper {
+    @apply w-full overflow-hidden rounded-3xl border-2 border-primary shadow-lg shadow-primary/40 lg:w-1/3;
   }
-  .hero-contact-wrapper .hero-contact-text .line {
-    @apply underline decoration-primary decoration-1 underline-offset-[12px];
+  .about-image-wrapper img {
+    @apply h-[500px] w-full object-cover;
+  }
+  .about-content-wrapper {
+    @apply w-full rounded-3xl bg-purple-900 bg-opacity-30 p-8 lg:w-2/3;
+  }
+  .about-content-wrapper p > .word {
+    @apply opacity-10;
   }
 
   /* home skills */
   .home-skills {
-    @apply relative;
+    @apply relative mt-24;
   }
   .skills-container {
-    @apply space-y-5 overflow-hidden rounded-2xl border-4 border-purple-500 p-4;
+    @apply space-y-5 overflow-hidden rounded-2xl border-4 border-primary p-4;
   }
 
   .skill-box {
-    @apply flex min-w-40 scale-100 transform cursor-pointer flex-col items-center gap-1 rounded-2xl bg-purple-600 bg-opacity-30 p-4 text-center shadow-lg shadow-purple-500/40 transition duration-500 hover:scale-110;
+    @apply flex min-w-40 scale-100 transform cursor-pointer flex-col items-center gap-1 rounded-2xl bg-purple-600 bg-opacity-30 p-4 text-center shadow-lg shadow-primary/40 transition duration-500 hover:scale-110;
   }
   .box {
     @apply relative flex flex-col items-center;
@@ -111,23 +119,23 @@
   .top-side,
   .right-side,
   .bottom-side {
-    @apply absolute bg-purple-500;
+    @apply absolute bg-primary;
   }
 
   .top-side {
-    @apply left-0 top-0 h-[14px] w-full rounded-t-2xl border-b-0 border-l-0 border-r-0 border-t-2 border-purple-500 bg-transparent;
+    @apply left-0 top-0 h-[14px] w-full rounded-t-2xl border-b-0 border-l-0 border-r-0 border-t-2 border-primary bg-transparent;
   }
 
   .right-side {
-    @apply right-0 top-0 h-full w-[14px] rounded-r-2xl border-b-0 border-l-0 border-r-2 border-t-0 border-purple-500 bg-transparent;
+    @apply right-0 top-0 h-full w-[14px] rounded-r-2xl border-b-0 border-l-0 border-r-2 border-t-0 border-primary bg-transparent;
   }
 
   .bottom-side {
-    @apply bottom-0 left-0 h-[14px] w-full rounded-b-2xl border-b-2 border-l-0 border-r-0 border-t-0 border-purple-500 bg-transparent;
+    @apply bottom-0 left-0 h-[14px] w-full rounded-b-2xl border-b-2 border-l-0 border-r-0 border-t-0 border-primary bg-transparent;
   }
 
   .left-side {
-    @apply left-0 top-0 h-full w-[14px] rounded-l-2xl border-b-0 border-l-2 border-r-0 border-t-0 border-purple-500 bg-transparent;
+    @apply left-0 top-0 h-full w-[14px] rounded-l-2xl border-b-0 border-l-2 border-r-0 border-t-0 border-primary bg-transparent;
   }
   .skill-box img {
     @apply h-16 w-16 object-contain md:h-20 md:w-20;
@@ -136,15 +144,20 @@
     @apply text-base font-semibold text-white;
   }
   .gradient-primary {
-    @apply absolute -inset-1 rounded-full bg-gradient-to-r from-primary to-purple-500 opacity-0 blur transition duration-500 group-hover:opacity-50;
+    @apply absolute -inset-1 rounded-full bg-gradient-to-r from-primary to-primary opacity-0 blur transition duration-500 group-hover:opacity-50;
   }
 
   /* home projects */
   .home-projects {
-    @apply relative mt-40;
+    @apply relative mt-24;
+  }
+  .projects-container {
   }
   .project-card {
-    @apply flex flex-col overflow-hidden rounded-2xl border-[1px] border-gray-500 xl:flex-row;
+    @apply relative mb-5 flex flex-col overflow-hidden rounded-2xl border-2 border-primary xl:flex-row;
+  }
+  .project-card-overlay {
+    @apply absolute inset-0;
   }
   .project-card .project-card-img {
     @apply w-full basis-4/6 border-b-[1px] border-gray-500 xl:border-b-0 xl:border-r-[1px];
@@ -167,11 +180,14 @@
   .badge {
     @apply rounded-xl bg-primary px-2 py-[3px] text-xs font-bold;
   }
+  .btn-wrapper {
+    @apply h-[4.5rem] w-fit overflow-y-hidden;
+  }
   .btn {
-    @apply h-fit w-fit cursor-pointer rounded-full border-2 border-primary px-4 py-3 [box-shadow:0_7px_0_0_#308c62,0_12px_0_0_#1c5239];
+    @apply h-fit w-fit cursor-pointer rounded-full border-2 border-primary px-4 py-3 text-sm font-semibold tracking-wider text-white [box-shadow:0_7px_0_0_#d435f0,0_12px_0_0_#46114f];
   }
   .cursor-follower {
-    @apply pointer-events-none fixed left-0 top-0 -z-10 h-96 w-96 rounded-full bg-blue-600 bg-gradient-to-br from-purple-500 to-purple-500 fill-purple-600 opacity-30 shadow-lg blur-3xl;
+    @apply pointer-events-none fixed left-0 top-0 -z-10 h-96 w-96 rounded-full bg-blue-600 bg-gradient-to-br from-primary to-primary fill-purple-600 opacity-30 shadow-lg blur-3xl;
   }
   .scroll-down {
     @apply absolute bottom-4 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2;
