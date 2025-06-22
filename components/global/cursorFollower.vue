@@ -1,8 +1,19 @@
 <script setup>
+import { useGlobalStore } from '~/store/global';
+
+const store = useGlobalStore();
 const _controller = useCursor();
-onMounted(() => {
-  _controller.initCursorFollower();
-});
+
+watch(
+  () => store.loader,
+  (val) => {
+    if (!val) {
+      _controller.initCursorFollower();
+    }
+  },
+  { immediate: !store.loader },
+);
+
 </script>
 
 <template>

@@ -8,5 +8,7 @@
     <PagesHomeAboutMe />
     <PagesHomeSkills />
     <PagesHomeProjects />
+    <PagesHomeContactMe />
+    <PagesHomeContactForm />
   </main>
 </template>

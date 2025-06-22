@@ -25,8 +25,6 @@ onMounted(() => {
       <div>
         <slot />
       </div>
-
-      <footer>footer</footer>
     </div>
   </div>
 </template>

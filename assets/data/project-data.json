@@ -1,0 +1,38 @@
+[
+  {
+    "title": "OneSmile (Satu BSD)",
+    "image": "project-1.png",
+    "description": "a community-centric platform within the OneSmile app. It allows users to view and interact with posts from various local communities, join groups, create and share content, and follow other users. Additionally, users can create new communities and invite others to join, fostering a more connected and engaged local environment. The platform is tailored to the needs of the BSD community, making it easier for residents to find and participate in local events and discussions.",
+    "techstack": ["Flutter"]
+  },
+  {
+    "title": "Indonesian Geoparks Network",
+    "image": "project-2.png",
+    "description": "This platform will centralize all relevant information about Indonesian geoparks, including in-depth articles on geological, archaeological, and ecological topics, news updates on geopark tourism, details about the organizations managing these geoparks, and information on upcoming events. The website will also feature an integrated ticketing system for geopark tours and events, making it easy for users to plan visits and participate in activities.",
+    "techstack": ["Laravel", "Bootstrap"]
+  },
+  {
+    "title": "SiJudul",
+    "image": "project-3.png",
+    "description": "SiJudul was developed as a mobile-based application where students could easily submit their thesis proposal titles. The platform allows professors to review, accept, or request revisions on the submitted titles efficiently. The development focused on creating an intuitive user interface, secure login for both students and professors, and a streamlined workflow for submission and feedback.",
+    "techstack": ["Flutter", "BLoC"]
+  },
+  {
+    "title": "Oasis One",
+    "image": "project-4.png",
+    "description": "This platform allows individual restaurants to manage all aspects of customer orders, including order tracking, inventory management, sales summaries, discount banner management, and customer relations.",
+    "techstack": ["React", "Bootstrap"]
+  },
+  {
+    "title": "Bagus Bagus",
+    "image": "project-5.png",
+    "description": "Bagus Bagus is designed to address these gaps by creating a comprehensive online marketplace for second-hand goods. The website will include a robust set of e-commerce features such as chat for buyer-seller communication, a cart for easy item management, a secure payment gateway, and a cash on delivery option. Additionally, Bagus Bagus will offer a unique donation feature, allowing users to donate used items directly through the platform, encouraging a circular economy and supporting charitable causes.",
+    "techstack": ["Laravel"  ]
+  },
+  {
+    "title": "SCM Hub",
+    "image": "project-6.png",
+    "description": " a company-centric platform designed to streamline internal processes for employees of Surya Citra Media and its affiliates. Within the app, users can manage daily attendance, submit medical and allowance requests, and access key employment-related data—all from their mobile devices. The platform empowers staff to handle HR tasks efficiently, with features like automated check-in/check-out, personal record access, and real-time status updates. Built to support the needs of corporate teams, SCM Hub1 fosters a more organized, connected, and self-service work environment for employees across departments.",
+    "techstack": ["Flutter", "GetX"]
+  }
+]

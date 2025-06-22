@@ -17,9 +17,9 @@ watch(
 <template>
   <section id="homeAbout">
     <div class="home-about overlay container">
-      <h3 id="split-about" class="section-title">
-        About<span class="stroke ml-5">Me</span>
-      </h3>
+      <div class="section-title">
+        <h3 id="split-about">About<span class="stroke ml-5">Me</span></h3>
+      </div>
       <div class="about-container">
         <div class="about-image-wrapper">
           <img src="/public/images/avt-card.webp" alt="" class="about-image" />
@@ -29,25 +29,19 @@ watch(
             class="mb-10 flex flex-col justify-between gap-4 lg:flex-row lg:items-center lg:gap-0"
           >
             <div class="title">
-              <div class="text-lg font-medium text-white">
+              <div class="text-lg font-semibold text-white">
                 Marwahal Hagai Excellent
               </div>
               <div class="font-medium text-gray-500">Software Developer</div>
             </div>
             <div class="flex gap-2 text-white">
-              <div
-                class="rounded-xl border-[1px] border-white border-opacity-20 p-2"
-              >
+              <div class="socmed-icon">
                 <Iconify icon="line-md:github" class="text-3xl" />
               </div>
-              <div
-                class="rounded-xl border-[1px] border-white border-opacity-20 p-2"
-              >
+              <div class="socmed-icon">
                 <Iconify icon="ic:outline-email" class="text-3xl" />
               </div>
-              <div
-                class="rounded-xl border-[1px] border-white border-opacity-20 p-2"
-              >
+              <div class="socmed-icon">
                 <Iconify icon="mdi:linkedin" class="text-3xl" />
               </div>
             </div>
@@ -57,7 +51,7 @@ watch(
               Passionate about technology and frontend craftsmanship.
             </div>
             <p class="text-white">
-              Im a frontend web and mobile developer focused on building
+              I'm a frontend web and mobile developer focused on building
               responsive, user-friendly applications using technologies like
               React.js, Next.js, Vue.js, Nuxt.js, Laravel, React Native, and
               Flutter. I enjoy turning ideas into clean, efficient, and scalable
