@@ -68,15 +68,14 @@ export const useAbout = defineStore("about", {
         gsap
           .timeline({
             scrollTrigger: {
-              trigger: "#homeAbout",
+              trigger: ".home-about",
               start: "top top",
               end: "+=150%",
               pin: true,
               scrub: true,
-              markers: true,
             },
           })
-          .set(splitDesc.words, {
+          .to(splitDesc.words, {
             opacity: 1,
             stagger: 0.05,
           });
@@ -86,15 +85,14 @@ export const useAbout = defineStore("about", {
         gsap
           .timeline({
             scrollTrigger: {
-              trigger: "#homeAbout",
+              trigger: ".home-about",
               start: "+=50% top",
               end: "+=150%",
               pin: true,
               scrub: true,
-              markers: true,
             },
           })
-          .set(splitDesc.words, {
+          .to(splitDesc.words, {
             opacity: 1,
             stagger: 0.05,
           });

@@ -1,8 +1,18 @@
 <script setup>
+import { useGlobalStore } from "~/store/global";
+
 const _controller = useHero();
-onMounted(() => {
-  _controller.showHero();
-});
+const store = useGlobalStore();
+
+watch(
+  () => store.loader,
+  (val) => {
+    if (!val) {
+      _controller.showHero();
+    }
+  },
+  { immediate: !store.loader },
+);
 </script>
 
 <template>

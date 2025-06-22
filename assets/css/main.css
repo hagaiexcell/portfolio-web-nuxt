@@ -8,6 +8,10 @@
   body {
     @apply bg-primaryBg p-0 font-monsterrat;
   }
+
+  section {
+    @apply mb-24;
+  }
 }
 
 @layer components {
@@ -94,13 +98,16 @@
   .about-content-wrapper {
     @apply w-full rounded-3xl bg-purple-900 bg-opacity-30 p-8 lg:w-2/3;
   }
+  .about-content-wrapper .socmed-icon {
+    @apply rounded-xl border-[1px] border-white border-opacity-20 p-2;
+  }
   .about-content-wrapper p > .word {
     @apply opacity-10;
   }
 
   /* home skills */
   .home-skills {
-    @apply relative mt-24;
+    @apply relative;
   }
   .skills-container {
     @apply space-y-5 overflow-hidden rounded-2xl border-4 border-primary p-4;
@@ -149,9 +156,7 @@
 
   /* home projects */
   .home-projects {
-    @apply relative mt-24;
-  }
-  .projects-container {
+    @apply relative;
   }
   .project-card {
     @apply relative mb-5 flex flex-col overflow-hidden rounded-2xl border-2 border-primary xl:flex-row;
@@ -173,6 +178,42 @@
   }
   .project-card .project-card-content .project-card-desc {
     @apply text-sm text-gray-400 md:text-base;
+  }
+
+  /* home contact me */
+  #contactMe {
+    @apply relative;
+  }
+  .contact-me {
+    @apply flex h-screen items-center justify-center overflow-x-hidden;
+  }
+  section#contactMe {
+    @apply !mb-0;
+  }
+
+  /* home contact form */
+  .contact-form {
+    @apply relative h-auto bg-[#0a023b] p-10 md:h-screen;
+    background: linear-gradient(
+      86deg,
+      rgba(10, 2, 59, 1) 0%,
+      rgba(136, 0, 255, 1) 39%,
+      rgba(156, 39, 176, 1) 61%
+    );
+    background-size: 200% 200%;
+    animation: gradientMove 8s ease-in-out infinite;
+  }
+
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
 }
 
