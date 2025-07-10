@@ -62,6 +62,39 @@ export const useAbout = defineStore("about", {
         { type: "words", wordsClass: "word" },
       );
 
+      const profileTL = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".about-image-wrapper",
+          start: "top 60%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      profileTL
+        .to(".about-image-inner", {
+          clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+          ease: "expo.out",
+          duration: 0.5,
+        })
+        .to(
+          ".about-image-layer",
+          {
+            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+            ease: "expo.out",
+            duration: 1,
+          },
+          "-=0.2",
+        )
+        .from(
+          "img.about-image",
+          {
+            scale: 1.2,
+            filter: "blur(15px)",
+            duration: 1,
+          },
+          "-=1",
+        );
+
       const mm = gsap.matchMedia();
 
       mm.add("(min-width: 1025px)", () => {
@@ -85,11 +118,12 @@ export const useAbout = defineStore("about", {
         gsap
           .timeline({
             scrollTrigger: {
-              trigger: ".home-about",
-              start: "+=50% top",
-              end: "+=150%",
+              trigger: ".about-content-wrapper",
+              start: "top top",
+              end: "bottom+=100 bottom",
               pin: true,
               scrub: true,
+              markers: true,
             },
           })
           .to(splitDesc.words, {

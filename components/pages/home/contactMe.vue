@@ -18,9 +18,12 @@ watch(
 <template>
   <section id="contactMe">
     <div class="contact-me overlay container overflow-y-hidden">
-      <div class="section-title paralax-wrapper">
+      <div
+        class="section-title paralax-wrapper !text-6xl !leading-normal md:!text-8xl md:!leading-none lg:!text-[10rem]"
+      >
         <h3 id="split-contact">
-          <span class="stroke">Let's </span>create great things
+          <span class="stroke">Let's</span> create <br />
+          great things
           <span class="stroke"> together</span>
         </h3>
       </div>

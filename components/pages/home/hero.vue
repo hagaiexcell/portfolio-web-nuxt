@@ -17,7 +17,7 @@ watch(
 
 <template>
   <section id="homeHero">
-    <div class="home-hero container">
+    <div class="home-hero">
       <video
         class="hero-video"
         autoplay
@@ -53,11 +53,13 @@ watch(
           </h2>
         </div>
 
-        <div class="btn-wrapper">
-          <div class="btn hero opacity-0">
-            <p>CONTACT ME</p>
+        <a href="#contactForm">
+          <div class="btn-wrapper">
+            <div class="btn hero opacity-0">
+              <p>CONTACT ME</p>
+            </div>
           </div>
-        </div>
+        </a>
 
         <div class="scroll-down">
           <div class="pointer-wrapper">

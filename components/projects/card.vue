@@ -13,8 +13,10 @@ defineProps<{
 <template>
   <div class="project-card">
     <div class="project-card-overlay"></div>
-    <div class="project-card-img">
-      <NuxtImg class="" :src="`/images/${project.image}`" alt="" />
+    <div class="project-card-inner">
+      <div class="project-card-img">
+        <NuxtImg :src="`/images/${project.image}`" alt="" />
+      </div>
     </div>
     <div class="project-card-content">
       <div class="project-card-title">

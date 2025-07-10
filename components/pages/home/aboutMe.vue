@@ -18,15 +18,23 @@ watch(
   <section id="homeAbout">
     <div class="home-about overlay container">
       <div class="section-title">
-        <h3 id="split-about">About<span class="stroke ml-5">Me</span></h3>
+        <h3 id="split-about">About<span class="stroke ml-2">Me</span></h3>
       </div>
       <div class="about-container">
         <div class="about-image-wrapper">
-          <img src="/public/images/avt-card.webp" alt="" class="about-image" />
+          <div class="about-image-inner">
+            <div class="about-image-layer">
+              <NuxtImg
+                src="/images/about-img.png"
+                alt="Marwahal Hagai Excellent"
+                class="about-image"
+              />
+            </div>
+          </div>
         </div>
         <div class="about-content-wrapper">
           <div
-            class="mb-10 flex flex-col justify-between gap-4 lg:flex-row lg:items-center lg:gap-0"
+            class="mb-5 flex flex-col justify-between gap-4 lg:flex-row lg:items-center lg:gap-0"
           >
             <div class="title">
               <div class="text-lg font-semibold text-white">
@@ -35,15 +43,23 @@ watch(
               <div class="font-medium text-gray-500">Software Developer</div>
             </div>
             <div class="flex gap-2 text-white">
-              <div class="socmed-icon">
+              <a
+                target="_blank"
+                href="https://github.com/excellent-hwg"
+                class="socmed-icon"
+              >
                 <Iconify icon="line-md:github" class="text-3xl" />
-              </div>
-              <div class="socmed-icon">
+              </a>
+              <a href="mailto:hagaiexcellent3@gmail.com" class="socmed-icon">
                 <Iconify icon="ic:outline-email" class="text-3xl" />
-              </div>
-              <div class="socmed-icon">
+              </a>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/hagaiexcell/"
+                class="socmed-icon"
+              >
                 <Iconify icon="mdi:linkedin" class="text-3xl" />
-              </div>
+              </a>
             </div>
           </div>
           <div class="description">
@@ -51,24 +67,29 @@ watch(
               Passionate about technology and frontend craftsmanship.
             </div>
             <p class="text-white">
-              I'm a frontend web and mobile developer focused on building
-              responsive, user-friendly applications using technologies like
-              React.js, Next.js, Vue.js, Nuxt.js, Laravel, React Native, and
-              Flutter. I enjoy turning ideas into clean, efficient, and scalable
-              solutions that enhance user experience and performance. With
-              strong attention to detail and a fast learning curve, I thrive on
-              learning, leading, and solving complex challenges—always
-              reflecting on how each experience contributes to both personal and
-              team growth. I'm passionate about writing clean, maintainable code
-              and continuously pushing myself to grow as a developer.
+              I’m a frontend web and mobile developer who builds responsive,
+              user-friendly apps with React.js, Next.js, Vue.js, Nuxt.js,
+              Laravel, React Native, and Flutter. I enjoy turning ideas into
+              clean, efficient solutions that improve user experience and
+              performance. I pay close attention to detail, learn quickly, and
+              like solving challenging problems. I’m passionate about writing
+              clean, maintainable code and always look for ways to grow and help
+              my team improve.
             </p>
           </div>
 
-          <div class="btn-wrapper mt-5">
-            <div class="btn about">
-              <p>Download CV</p>
+          <a
+            href="pdf/myCv.pdf"
+            rel="noopener"
+            type="application/pdf"
+            target="_blank"
+          >
+            <div class="btn-wrapper  mt-5">
+              <div class="btn about">
+                <p>Download CV</p>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>

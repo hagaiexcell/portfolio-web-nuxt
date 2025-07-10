@@ -6,7 +6,7 @@ export default defineNuxtPlugin(() => {
   gsap.registerPlugin(ScrollTrigger);
 
   const lenis = new Lenis({
-    lerp: 0.1,
+    lerp: 0.03,
   });
 
   function raf(time: number) {
