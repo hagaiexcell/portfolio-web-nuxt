@@ -17,8 +17,8 @@ watch(
 <template>
   <section id="homeSkills">
     <div class="home-skills overlay container">
-      <div class="section-title">
-        <h3 id="split-tech">Tech<span class="stroke ml-5">Stacks</span></h3>
+      <div class="section-title flex-nowrap">
+        <h3 id="split-tech">Tech <br class="block md:hidden"> Stacks</h3>
       </div>
       <div id="skillsContainer" class="skills-container">
         <div id="skillsContent" class="flex gap-8">

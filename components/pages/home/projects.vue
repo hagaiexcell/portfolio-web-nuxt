@@ -19,7 +19,7 @@ watch(
   <section id="homeProjects">
     <div class="home-projects overlay container">
       <div class="section-title flex-nowrap">
-        <h3 id="split-project">Pro<span class="stroke">jects</span></h3>
+        <h3 id="split-project">Projects</h3>
       </div>
       <div class="projects-container">
         <div v-for="(project, index) in projectData" :key="index">

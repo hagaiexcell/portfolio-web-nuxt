@@ -74,6 +74,46 @@ export const useProject = defineStore("project", {
         stagger: 0.02,
         ease: "back.out",
       });
+
+      const listProjectCard = document.querySelectorAll(".project-card");
+      listProjectCard.forEach((card) => {
+        const projectInner = card.querySelector(".project-card-inner");
+        const projectLayer = card.querySelector(".project-card-img");
+        const projectImg = card.querySelector(".project-card-img img");
+
+        const projectTL = gsap.timeline({
+          scrollTrigger: {
+            trigger: card,
+            start: "top 80%",
+            toggleActions: "play none none none",
+          },
+        });
+
+        projectTL
+          .to(projectInner, {
+            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+            ease: "expo.out",
+            duration: 0.5,
+          })
+          .to(
+            projectLayer,
+            {
+              clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+              ease: "expo.out",
+              duration: 1,
+            },
+            "-=0.2",
+          )
+          .from(
+            projectImg,
+            {
+              scale: 1.2,
+              filter: "blur(15px)",
+              duration: 1,
+            },
+            "-=1",
+          );
+      });
     },
   },
 });
