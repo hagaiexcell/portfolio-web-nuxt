@@ -123,7 +123,7 @@ export const useAbout = defineStore("about", {
               end: "bottom+=100 bottom",
               pin: true,
               scrub: true,
-              markers: true,
+              pinSpacing: true,
             },
           })
           .to(splitDesc.words, {
