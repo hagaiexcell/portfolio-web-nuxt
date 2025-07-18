@@ -18,7 +18,10 @@ watch(
   <section id="homeSkills">
     <div class="home-skills overlay container">
       <div class="section-title flex-nowrap">
-        <h3 id="split-tech">Tech <br class="block md:hidden"> Stacks</h3>
+        <h3 id="split-tech">
+          Tech <br class="block md:hidden" />
+          Stacks
+        </h3>
       </div>
       <div id="skillsContainer" class="skills-container">
         <div id="skillsContent" class="flex gap-8">
@@ -30,7 +33,12 @@ watch(
             >
               <div class="box">
                 <div class="relative">
-                  <NuxtImg src="/icons/ic-tailwind.png" alt="" />
+                  <NuxtImg
+                    src="/icons/ic-tailwind.png"
+                    alt="tailwind"
+                    placeholder
+                    format="webp"
+                  />
                   <div class="gradient-primary" />
                 </div>
                 <div class="skill-title">TAILWIND CSS</div>
@@ -53,7 +61,12 @@ watch(
             >
               <div class="box">
                 <div class="relative">
-                  <NuxtImg src="/icons/ic-tailwind.png" alt="" />
+                  <NuxtImg
+                    src="/icons/ic-tailwind.png"
+                    alt=""
+                    placeholder
+                    format="webp"
+                  />
                   <div class="gradient-primary" />
                 </div>
                 <div class="skill-title">TAILWIND CSS</div>

@@ -25,9 +25,13 @@ watch(
           <div class="about-image-inner">
             <div class="about-image-layer">
               <NuxtImg
+                fit="cover"
                 src="/images/about-img.png"
                 alt="Marwahal Hagai Excellent"
                 class="about-image"
+                height="500"
+                format="webp"
+                placeholder
               />
             </div>
           </div>
@@ -84,7 +88,7 @@ watch(
             type="application/pdf"
             target="_blank"
           >
-            <div class="btn-wrapper  mt-5">
+            <div class="btn-wrapper mt-5">
               <div class="btn about">
                 <p>Download CV</p>
               </div>

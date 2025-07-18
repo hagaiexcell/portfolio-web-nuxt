@@ -27,7 +27,7 @@
     "title": "Bagus Bagus",
     "image": "project-5.png",
     "description": "Bagus Bagus is designed to address these gaps by creating a comprehensive online marketplace for second-hand goods. The website will include a robust set of e-commerce features such as chat for buyer-seller communication, a cart for easy item management, a secure payment gateway, and a cash on delivery option. Additionally, Bagus Bagus will offer a unique donation feature, allowing users to donate used items directly through the platform, encouraging a circular economy and supporting charitable causes.",
-    "techstack": ["Laravel"  ]
+    "techstack": ["Laravel"]
   },
   {
     "title": "SCM Hub",

@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,7 +12,8 @@
   }
 
   body {
-    @apply bg-primaryBg p-0 font-monsterrat;
+    @apply bg-primaryBg p-0;
+    font-family: Poppins, sans-serif;
   }
 
   section {
@@ -112,7 +111,7 @@
     @apply h-[500px] w-full object-cover;
   }
   .about-content-wrapper {
-    @apply w-full rounded-3xl flex flex-col justify-between bg-purple-900 bg-opacity-30 p-8 lg:w-2/3;
+    @apply flex w-full flex-col justify-between rounded-3xl bg-purple-900 bg-opacity-30 p-8 lg:w-2/3;
   }
   .about-content-wrapper .socmed-icon {
     @apply rounded-xl border-[1px] border-white border-opacity-20 p-2;

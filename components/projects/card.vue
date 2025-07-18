@@ -15,7 +15,12 @@ defineProps<{
     <div class="project-card-overlay"></div>
     <div class="project-card-inner">
       <div class="project-card-img">
-        <NuxtImg :src="`/images/${project.image}`" alt="" />
+        <NuxtImg
+          :src="`/images/${project.image}`"
+          :alt="project.title"
+          placeholder
+          format="webp"
+        />
       </div>
     </div>
     <div class="project-card-content">
