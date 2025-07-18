@@ -22,9 +22,6 @@ module.exports = {
           "2xl": "6rem",
         },
       },
-      fontFamily: {
-        monsterrat: ["Montserrat"],
-      },
       colors: {
         primaryBg: "#151515",
         secondary: "#242424",

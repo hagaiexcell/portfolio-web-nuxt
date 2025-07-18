@@ -18,10 +18,6 @@ onMounted(() => {
     <Splashscreen />
 
     <div :class="loaderState ? 'hidden' : ''">
-      <header>
-        <!-- <Navbar /> -->
-      </header>
-
       <div>
         <slot />
       </div>

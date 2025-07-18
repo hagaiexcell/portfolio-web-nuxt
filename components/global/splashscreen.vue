@@ -1,6 +1,4 @@
 <script setup>
-// import { LottieAnimation } from "lottie-web-vue";
-// import assetsLottie from "@/assets/lottie/loader.json";
 import { useGlobalStore } from "~/store/global";
 
 const store = useGlobalStore();

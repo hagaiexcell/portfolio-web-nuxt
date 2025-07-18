@@ -10,8 +10,8 @@
       <div
         class="mb-8 flex flex-col items-center justify-center gap-6 text-white"
       >
-        <h5 class="text-3xl font-semibold md:text-5xl">Stay In Touch</h5>
-        <p class="text-center text-lg">
+        <h5 class="z-30 text-3xl font-semibold md:text-5xl">Stay In Touch</h5>
+        <p class="z-30 text-center text-lg">
           If you're interested in hiring me or collaborating,<br />
           feel free to reach out for recruitment, partnership or follow to stay
           in touch

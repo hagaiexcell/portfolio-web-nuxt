@@ -212,7 +212,7 @@ export const useHero = defineStore("hero", {
           gsap.to(".overlay", {
             zIndex: "20",
           });
-        },  
+        },
         onLeaveBack: () => {
           gsap.to(".home-hero", {
             filter: "blur(0px)",

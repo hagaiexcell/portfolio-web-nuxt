@@ -26,6 +26,7 @@ export default defineNuxtConfig({
         ],
       },
     ],
+    "@nuxt/fonts",
   ],
   gsap: {
     composables: true,

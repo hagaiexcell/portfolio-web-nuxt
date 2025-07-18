@@ -1,5 +1,5 @@
 <script setup>
-import { useGlobalStore } from '~/store/global';
+import { useGlobalStore } from "~/store/global";
 
 const store = useGlobalStore();
 const _controller = useCursor();
@@ -13,7 +13,6 @@ watch(
   },
   { immediate: !store.loader },
 );
-
 </script>
 
 <template>
