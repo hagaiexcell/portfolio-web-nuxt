@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import compression from "vite-plugin-compression";
+
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
@@ -28,6 +30,18 @@ export default defineNuxtConfig({
     ],
     "@nuxt/fonts",
   ],
+  vite: {
+    plugins: [
+      compression({
+        algorithm: "brotliCompress",
+        ext: ".br",
+      }),
+      compression({
+        algorithm: "gzip",
+        ext: ".gz",
+      }),
+    ],
+  },
   gsap: {
     composables: true,
     provide: false,
