@@ -1,6 +1,4 @@
-<script setup>
-import { Icon } from "@iconify/vue";
-</script>
+<script setup></script>
 
 <template>
   <Icon v-bind="$attrs" :ssr="true" />
