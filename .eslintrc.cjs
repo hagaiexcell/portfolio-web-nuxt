@@ -1,6 +1,17 @@
 module.exports = {
   root: true,
-  extends: ["@nuxt/eslint-config"],
+  extends: [
+    "plugin:vue/vue3-recommended",
+    "plugin:nuxt/recommended",
+    "plugin:@typescript-eslint/recommended",
+  ],
+  parser: "vue-eslint-parser",
+  parserOptions: {
+    parser: "@typescript-eslint/parser",
+    extraFileExtensions: [".vue"],
+    ecmaVersion: 2020,
+    sourceType: "module",
+  },
   rules: {
     "vue/no-v-html": "off",
     "vue/multi-word-component-names": "off",
