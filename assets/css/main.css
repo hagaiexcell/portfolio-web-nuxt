@@ -255,7 +255,7 @@
     @apply pointer-events-none fixed left-0 top-0 -z-10 h-96 w-96 rounded-full bg-blue-600 bg-gradient-to-br from-primary to-primary fill-purple-600 opacity-30 shadow-lg blur-3xl;
   }
   .scroll-down {
-    @apply absolute bottom-4 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2;
+    @apply absolute left-1/2 top-[88dvh] flex -translate-x-1/2 flex-col items-center gap-2;
   }
   .scroll-down .pointer-wrapper {
     @apply relative h-10 w-5 rounded-full border-[1px] border-white;
