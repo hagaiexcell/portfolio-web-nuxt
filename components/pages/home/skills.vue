@@ -1,5 +1,6 @@
 <script setup>
 import { useGlobalStore } from "~/store/global";
+import skillsData from "assets/data/skills-data.json";
 
 const _controller = useSkills();
 const store = useGlobalStore();
@@ -27,21 +28,25 @@ watch(
         <div id="skillsContent" class="flex gap-8">
           <template v-for="repeat in 2">
             <div
-              v-for="index in 12"
-              :key="`${repeat}-${index}`"
+              v-for="(skill, index) in skillsData"
+              :key="`${repeat}-${skill.title}-${index}`"
               class="skill-box group"
             >
               <div class="box">
                 <div class="relative">
                   <NuxtImg
-                    src="/icons/ic-tailwind.png"
-                    alt="tailwind"
+                    :src="skill.image"
+                    :alt="skill.title"
                     placeholder
+                    background="transparent"
                     format="webp"
+                    height="50"
+                    width="50"
+                    fit="contain"
                   />
                   <div class="gradient-primary" />
                 </div>
-                <div class="skill-title">TAILWIND CSS</div>
+                <div class="skill-title">{{ skill.title }}</div>
               </div>
               <div class="square">
                 <span class="left-side" />
@@ -55,21 +60,24 @@ watch(
         <div id="skillsContent2" class="flex gap-8">
           <template v-for="repeat in 2">
             <div
-              v-for="index in 12"
-              :key="`${repeat}-${index}`"
+              v-for="(skill, index) in skillsData"
+              :key="`${repeat}-${skill.title}-${index}`"
               class="skill-box group"
             >
               <div class="box">
                 <div class="relative">
                   <NuxtImg
-                    src="/icons/ic-tailwind.png"
-                    alt=""
+                    :src="skill.image"
+                    :alt="skill.title"
                     placeholder
-                    format="webp"
+                    background="transparent"
+                    height="50"
+                    width="50"
+                    fit="contain"
                   />
                   <div class="gradient-primary" />
                 </div>
-                <div class="skill-title">TAILWIND CSS</div>
+                <div class="skill-title">{{ skill.title }}</div>
               </div>
               <div class="square">
                 <span class="left-side" />

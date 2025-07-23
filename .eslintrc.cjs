@@ -21,6 +21,7 @@ module.exports = {
     "vue/max-attributes-per-line": "off",
     "vue/singleline-html-element-content-newline": "off",
     "vue/valid-def-props": "off",
+    "vue/valid-define-props": "off",
     "vue/first-attribute-linebreak": "off",
     "vue/no-reserved-props": "off",
     "vue/html-self-closing": "off",
