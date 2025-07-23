@@ -1,0 +1,13 @@
+[
+  { "image": "/icons/ic-tailwind.png", "title": "Tailwind" },
+  { "image": "/icons/ic-next.svg", "title": "Next.js" },
+  { "image": "/icons/ic-react.png", "title": "React.js" },
+  { "image": "/icons/ic-nuxt.svg", "title": "Nuxt.js" },
+  { "image": "/icons/ic-vue.png", "title": "Vue.js" },
+  { "image": "/icons/ic-gsap.svg", "title": "GSAP" },
+  { "image": "/icons/ic-bootstrap.svg", "title": "Bootstrap" },
+  { "image": "/icons/ic-flutter.webp", "title": "Flutter" },
+  { "image": "/icons/ic-bloc.png", "title": "BLoC" },
+  { "image": "/icons/ic-redux.webp", "title": "Redux" },
+  { "image": "/icons/ic-react.png", "title": "React Native" }
+]

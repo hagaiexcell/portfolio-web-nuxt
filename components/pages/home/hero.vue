@@ -24,7 +24,9 @@ watch(
         loop
         muted
         playsinline
-        src="/public/videos/bg-video.mp4"
+        src="/videos/bg-video.mp4" 
+        type="video/webm"
+        preload="metadata"
       ></video>
 
       <div class="hero-text-wrapper">
