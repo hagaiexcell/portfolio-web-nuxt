@@ -36,7 +36,7 @@ export const useHero = defineStore("hero", {
         })
         .from([".hero-title-text .static", ".cursor"], {
           duration: 0.5,
-          y: "10vw",
+          yPercent: 100,
           ease: "power3.out",
           opacity: 1,
         })
@@ -89,18 +89,6 @@ export const useHero = defineStore("hero", {
         transformOrigin: "50% 50%",
         ease: "none",
       });
-
-      // gsap.to(".home-hero", {
-      //   y: "-100vh",
-      //   ease: "power2.inOut",
-      //   duration: 1,
-      //   scrollTrigger: {
-      //     trigger: ".home-hero",
-      //     start: "top top",
-      //     end: "+=90%",
-      //     scrub: 1.2,
-      //   },
-      // });
 
       gsap.from(".btn.hero", {
         y: "20vh",
@@ -192,7 +180,7 @@ export const useHero = defineStore("hero", {
       // blurring when scrolling down
       ScrollTrigger.create({
         trigger: ".home-hero",
-        start: `top+=${window.innerHeight - 700} top`,
+        start: `top+=${window.innerHeight * 0.2} top`,
         end: "bottom top",
         onEnter: () => {
           gsap.to(".home-hero", {

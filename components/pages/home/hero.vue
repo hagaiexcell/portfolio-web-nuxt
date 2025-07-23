@@ -24,7 +24,7 @@ watch(
         loop
         muted
         playsinline
-        src="/videos/bg-video.mp4" 
+        src="/videos/bg-video.mp4"
         type="video/webm"
         preload="metadata"
       ></video>
