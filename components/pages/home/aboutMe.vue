@@ -3,6 +3,20 @@ import { useGlobalStore } from "~/store/global";
 
 const _controller = useAbout();
 const store = useGlobalStore();
+const isTallAspectRatio = ref(false);
+
+function checkScreen() {
+  isTallAspectRatio .value = window.innerHeight >= 700;
+}
+
+onMounted(() => {
+  checkScreen();
+  window.addEventListener("resize", checkScreen);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("resize", checkScreen);
+});
 
 watch(
   () => store.loader,
@@ -38,7 +52,7 @@ watch(
         </div>
         <div class="about-content-wrapper">
           <div
-            class="mb-5 flex flex-col justify-between gap-4 lg:flex-row lg:items-center lg:gap-0"
+            class="mb-3 lg:mb-5 flex flex-col justify-between gap-4 lg:flex-row lg:items-center lg:gap-0"
           >
             <div class="title">
               <div class="text-lg font-semibold text-white">
@@ -67,7 +81,7 @@ watch(
             </div>
           </div>
           <div class="description">
-            <div class="mb-5 text-3xl font-bold text-white">
+            <div v-if="isTallAspectRatio" class="mb-5 text-2xl lg:text-3xl font-bold text-white">
               Passionate about technology and frontend craftsmanship.
             </div>
             <p class="text-white">

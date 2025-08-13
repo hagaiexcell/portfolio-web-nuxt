@@ -4,15 +4,19 @@ import { useGlobalStore } from "~/store/global";
 const store = useGlobalStore();
 const _controller = useCursor();
 
-watch(
-  () => store.loader,
-  (val) => {
-    if (!val) {
-      _controller.initCursorFollower();
-    }
-  },
-  { immediate: !store.loader },
-);
+onMounted(() => {
+  const isDesktop = window.matchMedia("(pointer: fine)").matches;
+
+  watch(
+    () => store.loader,
+    (val) => {
+      if (!val && isDesktop) {
+        _controller.initCursorFollower();
+      }
+    },
+    { immediate: !store.loader },
+  );
+});
 </script>
 
 <template>

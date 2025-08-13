@@ -117,11 +117,12 @@ export const useAbout = defineStore("about", {
           .timeline({
             scrollTrigger: {
               trigger: ".about-content-wrapper",
-              start: "top top",
-              end: "bottom+=100 bottom",
+              start: "top-=10vh top",
+              end: "bottom top",
               pin: true,
               scrub: true,
               pinSpacing: true,
+              markers: true
             },
           })
           .to(splitDesc.words, {

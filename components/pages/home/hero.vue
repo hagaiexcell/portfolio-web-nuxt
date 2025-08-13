@@ -18,16 +18,22 @@ watch(
 <template>
   <section id="homeHero">
     <div class="home-hero">
+      <div class="hero-blur-overlay"></div>
       <video
         class="hero-video"
         autoplay
         loop
         muted
         playsinline
-        src="/videos/bg-video.mp4"
-        type="video/webm"
-        preload="metadata"
-      ></video>
+        webkit-playsinline
+        preload="auto"
+      >
+        <!-- Format WebM untuk browser yang mendukung -->
+        <source src="/videos/bg-video.mp4" type="video/webm" />
+
+        <!-- Format MP4 fallback untuk iOS Safari -->
+        <source src="/videos/bg-video.mp4" type="video/mp4" />
+      </video>
 
       <div class="hero-text-wrapper">
         <div class="hero-subdesc-wrapper hero-content-text">
