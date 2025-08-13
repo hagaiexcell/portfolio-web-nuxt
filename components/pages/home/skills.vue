@@ -25,68 +25,53 @@ watch(
         </h3>
       </div>
       <div id="skillsContainer" class="skills-container">
-        <div id="skillsContent" class="flex gap-8">
-          <template v-for="repeat in 2">
-            <div
-              v-for="(skill, index) in skillsData"
-              :key="`${repeat}-${skill.title}-${index}`"
-              class="skill-box group"
-            >
-              <div class="box">
-                <div class="relative">
-                  <NuxtImg
-                    :src="skill.image"
-                    :alt="skill.title"
-                    placeholder
-                    background="transparent"
-                    format="webp"
-                    height="50"
-                    width="50"
-                    fit="contain"
-                  />
-                  <div class="gradient-primary" />
-                </div>
-                <div class="skill-title">{{ skill.title }}</div>
+        <div id="skillsContent" class="marquee-track">
+          <div
+            v-for="(skill, index) in [...skillsData, ...skillsData]"
+            :key="index"
+            class="skill-box group"
+          >
+            <div class="box">
+              <div class="relative">
+                <NuxtImg
+                  :src="skill.image"
+                  :alt="skill.title"
+                  placeholder
+                  background="transparent"
+                  format="webp"
+                  height="50"
+                  width="50"
+                  fit="contain"
+                />
+                <div class="gradient-primary" />
               </div>
-              <div class="square">
-                <span class="left-side" />
-                <span class="top-side" />
-                <span class="right-side" />
-                <span class="bottom-side" />
-              </div>
+              <div class="skill-title">{{ skill.title }}</div>
             </div>
-          </template>
+          </div>
         </div>
-        <div id="skillsContent2" class="flex gap-8">
-          <template v-for="repeat in 2">
-            <div
-              v-for="(skill, index) in skillsData"
-              :key="`${repeat}-${skill.title}-${index}`"
-              class="skill-box group"
-            >
-              <div class="box">
-                <div class="relative">
-                  <NuxtImg
-                    :src="skill.image"
-                    :alt="skill.title"
-                    placeholder
-                    background="transparent"
-                    height="50"
-                    width="50"
-                    fit="contain"
-                  />
-                  <div class="gradient-primary" />
-                </div>
-                <div class="skill-title">{{ skill.title }}</div>
+        <div id="skillsContent2" class="marquee-track reverse">
+          <div
+            v-for="(skill, index) in [...skillsData, ...skillsData].reverse()"
+            :key="index"
+            class="skill-box group"
+          >
+            <div class="box">
+              <div class="relative">
+                <NuxtImg
+                  :src="skill.image"
+                  :alt="skill.title"
+                  placeholder
+                  background="transparent"
+                  format="webp"
+                  height="50"
+                  width="50"
+                  fit="contain"
+                />
+                <div class="gradient-primary" />
               </div>
-              <div class="square">
-                <span class="left-side" />
-                <span class="top-side" />
-                <span class="right-side" />
-                <span class="bottom-side" />
-              </div>
+              <div class="skill-title">{{ skill.title }}</div>
             </div>
-          </template>
+          </div>
         </div>
       </div>
     </div>

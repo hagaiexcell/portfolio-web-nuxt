@@ -27,62 +27,6 @@ export const useSkills = defineStore("skills", {
         stagger: 0.02,
         ease: "back.out",
       });
-
-      gsap.to(".skill-box", {
-        xPercent: -100,
-        repeat: -1,
-        duration: 0.2,
-      });
-
-      const marqueeContent = document.querySelector("#skillsContent");
-      const marqueeContent2 = document.querySelector("#skillsContent2");
-      const skillBox = marqueeContent?.querySelector(".skill-box");
-      const boxWidth = skillBox?.clientWidth || 0;
-      const gap = 32; // if gap-8 (8*4=32px)
-      const cards = 12;
-      const width = cards * (boxWidth + gap);
-
-      gsap.fromTo(
-        marqueeContent,
-        { x: 0 },
-        {
-          x: `-=${width}`,
-          duration: 20,
-          ease: "none",
-          repeat: -1,
-          modifiers: {
-            x: gsap.utils.unitize((x) => parseFloat(x) % width),
-          },
-        },
-      );
-      gsap.fromTo(
-        marqueeContent2,
-        { x: -width },
-        {
-          x: `+=${width}`,
-          duration: 20,
-          ease: "none",
-          repeat: -1,
-          modifiers: {
-            x: gsap.utils.unitize((x) => parseFloat(x) % width),
-          },
-        },
-      );
-
-      // gsap.fromTo(
-      //   "#skillsContainer2",
-      //   {
-      //     x: 0,
-      //   },
-      //   {
-      //     x: width,
-      //     duration: 20,
-      //     repeat: -1,
-      //     modifiers: {
-      //       x: gsap.utils.unitize((x) => parseFloat(x) % width), // looping halus
-      //     },
-      //   },
-      // );
     },
   },
 });

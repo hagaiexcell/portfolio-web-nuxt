@@ -84,8 +84,8 @@ export const useHero = defineStore("hero", {
       gsap.to(iconWave, {
         yoyo: true,
         repeat: -1,
-        duration: 0.3,
-        rotation: 20,
+        duration: 0.6,
+        rotation: 30,
         transformOrigin: "50% 50%",
         ease: "none",
       });
@@ -126,41 +126,8 @@ export const useHero = defineStore("hero", {
         });
       });
 
-      const tl = gsap.timeline({
-        repeat: -1,
-        yoyo: true,
-      });
-
-      tl.fromTo(
-        ".top-side",
-        { clipPath: "inset(0 100% 0 0)" },
-        { duration: 4, clipPath: "inset(0 0% 0 0)", ease: "none" },
-        0,
-      );
-
-      tl.fromTo(
-        ".right-side",
-        { clipPath: "inset(0 0 100% 0)" },
-        { duration: 4, clipPath: "inset(0 0 0% 0)", ease: "none" },
-        0,
-      );
-
-      tl.fromTo(
-        ".bottom-side",
-        { clipPath: "inset(0 0 0 100%)" },
-        { duration: 4, clipPath: "inset(0 0 0 0%)", ease: "none" },
-        0,
-      );
-
-      tl.fromTo(
-        ".left-side",
-        { clipPath: "inset(100% 0 0 0)" },
-        { duration: 4, clipPath: "inset(0% 0 0 0)", ease: "none" },
-        0,
-      );
-
-      gsap
-        .timeline({ repeat: -1 })
+      const scrollDownTL = gsap
+        .timeline({ repeat: -1, paused: true })
         .to(".scroll-down .pointer-wrapper .pointer", {
           top: "28px",
           ease: "power2.out",
@@ -177,16 +144,17 @@ export const useHero = defineStore("hero", {
           top: "0px",
         });
 
+      scrollDownTL.play();
+
       // blurring when scrolling down
       ScrollTrigger.create({
         trigger: ".home-hero",
         start: `top+=${window.innerHeight * 0.2} top`,
         end: "bottom top",
         onEnter: () => {
-          gsap.to(".home-hero", {
-            filter: "blur(10px)",
-            backgroundColor: "rgba(0, 0, 0, 0.7)",
-            duration: 0.5,
+          scrollDownTL.pause().kill();
+          gsap.to(".hero-blur-overlay", {
+            opacity: 0.9,
           });
           gsap.to(".cursor-follower", {
             zIndex: "10",
@@ -202,10 +170,9 @@ export const useHero = defineStore("hero", {
           });
         },
         onLeaveBack: () => {
-          gsap.to(".home-hero", {
-            filter: "blur(0px)",
-            backgroundColor: "rgba(0, 0, 0, 0)",
-            duration: 0.5,
+          if (!scrollDownTL.isActive()) scrollDownTL.restart();
+          gsap.to(".hero-blur-overlay", {
+            opacity: 0,
           });
           gsap.to(".cursor-follower", {
             zIndex: "-10",
