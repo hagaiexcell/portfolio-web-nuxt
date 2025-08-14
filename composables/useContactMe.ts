@@ -10,8 +10,7 @@ export const useContactMe = defineStore("contactMe", {
       gsap.to(".paralax-wrapper", {
         yPercent: 100,
         duration: 2,
-        filter: "blur(15px)",
-        opacity: "0.25",
+        opacity: 0,
         scrollTrigger: {
           trigger: ".contact-me",
           start: "top top",
