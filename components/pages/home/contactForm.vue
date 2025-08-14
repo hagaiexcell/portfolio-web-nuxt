@@ -16,10 +16,10 @@
           in touch
         </p>
       </div>
-      <div class="mx-auto grid grid-cols-1 gap-8 md:w-2/3 md:grid-cols-2">
+      <div class="mx-auto grid grid-cols-1 gap-8 md:grid-cols-2 lg:w-2/3">
         <a href="mailto:hagaiexcellent3@gmail.com">
           <div
-            class="group flex cursor-pointer gap-3 rounded-2xl bg-white bg-opacity-20 p-5"
+            class="group flex h-full cursor-pointer gap-3 rounded-2xl bg-white bg-opacity-20 p-5"
           >
             <div
               class="h-fit rounded-xl bg-secondary p-3 transition-colors duration-500 ease-in-out group-hover:bg-white"
@@ -48,7 +48,7 @@
         </a>
         <a href="https://www.instagram.com/hagaiexcell/" target="_blank">
           <div
-            class="group flex cursor-pointer gap-3 rounded-2xl bg-white bg-opacity-20 p-5"
+            class="group flex h-full cursor-pointer gap-3 rounded-2xl bg-white bg-opacity-20 p-5"
           >
             <div
               class="h-fit rounded-xl bg-secondary p-3 transition-colors duration-500 ease-in-out group-hover:bg-white"
@@ -77,7 +77,7 @@
         </a>
         <a href="https://www.linkedin.com/in/hagaiexcell/" target="_blank">
           <div
-            class="group flex cursor-pointer gap-3 rounded-2xl bg-white bg-opacity-20 p-5"
+            class="group flex h-full cursor-pointer gap-3 rounded-2xl bg-white bg-opacity-20 p-5"
           >
             <div
               class="h-fit rounded-xl bg-secondary p-3 transition-colors duration-500 ease-in-out group-hover:bg-white"
@@ -106,7 +106,7 @@
         </a>
         <a href="https://github.com/excellent-hwg" target="_blank">
           <div
-            class="group flex cursor-pointer gap-3 rounded-2xl bg-white bg-opacity-20 p-5"
+            class="group flex h-full cursor-pointer gap-3 rounded-2xl bg-white bg-opacity-20 p-5"
           >
             <div
               class="h-fit rounded-xl bg-secondary p-3 transition-colors duration-500 ease-in-out group-hover:bg-white"

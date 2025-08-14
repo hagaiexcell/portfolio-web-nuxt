@@ -111,25 +111,6 @@ export const useAbout = defineStore("about", {
             stagger: 0.05,
           });
       });
-
-      mm.add("(max-width: 1024px)", () => {
-        gsap
-          .timeline({
-            scrollTrigger: {
-              trigger: ".about-content-wrapper",
-              start: "top-=10vh top",
-              end: "bottom top",
-              pin: true,
-              scrub: true,
-              pinSpacing: true,
-              markers: true,
-            },
-          })
-          .to(splitDesc.words, {
-            opacity: 1,
-            stagger: 0.05,
-          });
-      });
     },
   },
 });

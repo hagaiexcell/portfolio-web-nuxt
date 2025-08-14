@@ -29,6 +29,16 @@ export default defineNuxtConfig({
       },
     ],
     "@nuxt/fonts",
+    [
+      "@nuxtjs/google-fonts",
+      {
+        families: {
+          Poppins: [400, 500, 600, 700, 800, 900],
+        },
+        preconnect: true,
+        display: "swap",
+      },
+    ],
   ],
   vite: {
     plugins: [
