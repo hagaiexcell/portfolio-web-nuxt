@@ -156,9 +156,11 @@ export const useHero = defineStore("hero", {
           gsap.to(".hero-blur-overlay", {
             opacity: 0.9,
           });
-          gsap.to(".cursor-follower", {
-            zIndex: "10",
-          });
+          if (window.innerWidth >= 1024) {
+            gsap.to(".cursor-follower", {
+              zIndex: 10,
+            });
+          }
           gsap.to(".scroll-down", {
             y: "20vh",
           });

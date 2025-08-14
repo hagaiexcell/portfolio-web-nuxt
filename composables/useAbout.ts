@@ -122,7 +122,7 @@ export const useAbout = defineStore("about", {
               pin: true,
               scrub: true,
               pinSpacing: true,
-              markers: true
+              markers: true,
             },
           })
           .to(splitDesc.words, {
