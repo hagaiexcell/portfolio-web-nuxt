@@ -81,6 +81,8 @@ export const useProject = defineStore("project", {
         const projectLayer = card.querySelector(".project-card-img");
         const projectImg = card.querySelector(".project-card-img img");
 
+        const isMobile = window.innerWidth < 768;
+
         const projectTL = gsap.timeline({
           scrollTrigger: {
             trigger: card,
@@ -89,30 +91,59 @@ export const useProject = defineStore("project", {
           },
         });
 
-        projectTL
-          .to(projectInner, {
-            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-            ease: "expo.out",
-            duration: 0.5,
-          })
-          .to(
-            projectLayer,
-            {
+        if (isMobile) {
+          projectTL
+            .from(projectInner, {
+              scaleX: 0,
+              transformOrigin: "left center",
+              ease: "power2.out",
+              duration: 0.4,
+            })
+            .from(
+              projectLayer,
+              {
+                scaleX: 0,
+                transformOrigin: "left center",
+                ease: "power2.out",
+                duration: 0.6,
+              },
+              "-=0.2",
+            )
+            .from(
+              projectImg,
+              {
+                scale: 1.05,
+                duration: 0.6,
+                ease: "power2.out",
+              },
+              "-=0.5",
+            );
+        } else {
+          projectTL
+            .to(projectInner, {
               clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
               ease: "expo.out",
-              duration: 1,
-            },
-            "-=0.2",
-          )
-          .from(
-            projectImg,
-            {
-              scale: 1.2,
-              filter: "blur(15px)",
-              duration: 1,
-            },
-            "-=1",
-          );
+              duration: 0.5,
+            })
+            .to(
+              projectLayer,
+              {
+                clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                ease: "expo.out",
+                duration: 1,
+              },
+              "-=0.2",
+            )
+            .from(
+              projectImg,
+              {
+                scale: 1.2,
+                filter: "blur(15px)",
+                duration: 1,
+              },
+              "-=1",
+            );
+        }
       });
     },
   },

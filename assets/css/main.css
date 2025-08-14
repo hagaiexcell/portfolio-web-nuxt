@@ -178,21 +178,29 @@
     @apply relative;
   }
   .project-card {
-    @apply relative mb-5 flex flex-col overflow-hidden rounded-2xl border-2 border-primary xl:flex-row;
+    @apply relative mb-5 flex flex-col overflow-hidden rounded-2xl border-2 border-primary bg-black xl:flex-row;
   }
   .project-card-overlay {
     @apply absolute inset-0;
   }
   .project-card-inner {
-    @apply h-full w-full bg-purple-950;
-    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+    @apply h-full w-full bg-purple-950 will-change-transform;
+  }
+  @media screen and (min-width: 768px) {
+    .project-card-inner {
+      clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+    }
   }
   .project-card .project-card-img {
-    @apply h-full w-full basis-4/6 border-b-[1px] border-gray-500 xl:border-b-0 xl:border-r-[1px];
-    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+    @apply h-full w-full basis-4/6 border-b-[1px] border-gray-500 will-change-transform xl:border-b-0 xl:border-r-[1px];
+  }
+  @media screen and (min-width: 768px) {
+    .project-card .project-card-img {
+      clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+    }
   }
   .project-card .project-card-img img {
-    @apply h-full w-full object-cover;
+    @apply h-full w-full object-cover will-change-transform;
   }
   .project-card .project-card-content {
     @apply flex basis-2/6 flex-col gap-3 bg-secondary p-4;
