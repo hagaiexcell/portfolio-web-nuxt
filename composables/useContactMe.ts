@@ -24,22 +24,24 @@ export const useContactMe = defineStore("contactMe", {
 
       const split = SplitText.create("#split-contact", { type: "words" });
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: "#split-contact",
-          start: "top 80%",
-          end: "bottom+=300 80%",
-          toggleActions: "play none none none",
-          scrub: 1,
-        },
-      });
+      gsap.matchMedia().add("(min-width: 1025px)", () => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: "#split-contact",
+            start: "top 80%",
+            end: "bottom+=300 80%",
+            toggleActions: "play none none none",
+            scrub: 1,
+          },
+        });
 
-      tl.from(split.words, {
-        duration: 1,
-        opacity: 0,
-        yPercent: 100,
-        stagger: 0.2,
-        ease: "back.out",
+        tl.from(split.words, {
+          duration: 1,
+          opacity: 0,
+          yPercent: 100,
+          stagger: 0.2,
+          ease: "back.out",
+        });
       });
     },
   },
