@@ -22,6 +22,9 @@ module.exports = {
           "2xl": "6rem",
         },
       },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
       colors: {
         primaryBg: "#151515",
         secondary: "#242424",
