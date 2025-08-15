@@ -146,12 +146,10 @@ export const useHero = defineStore("hero", {
 
       scrollDownTL.play();
 
-      // blurring when scrolling down
       ScrollTrigger.create({
         trigger: ".home-hero",
         start: `top+=${window.innerHeight * 0.2} top`,
         end: "top top",
-        markers: true,
         onEnter: () => {
           scrollDownTL.pause().kill();
           gsap.to(".hero-blur-overlay", {
