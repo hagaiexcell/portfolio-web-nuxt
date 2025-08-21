@@ -21,9 +21,8 @@ export const useContactMe = defineStore("contactMe", {
         },
       });
 
-      const split = SplitText.create("#split-contact", { type: "words" });
-
       gsap.matchMedia().add("(min-width: 1025px)", () => {
+        const split = SplitText.create("#split-contact", { type: "words" });
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: "#split-contact",
